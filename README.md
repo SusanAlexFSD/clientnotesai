@@ -1,207 +1,213 @@
 # 🤖 AI Client Notes
 
-## Short Description
+A full-stack web application built with **Next.js, TypeScript and Prisma**, designed as a client-notes and AI-focused application.
 
-AI Client Notes is a full-stack client management application that uses AI to turn rough client session notes into structured summaries, action points and personalised follow-up messages.
-
-The application is designed for coaches, freelancers and small business owners who want to keep client information organised while reducing the time spent writing up session notes and follow-ups.
-
-🔗 **Live Demo:** [https://clientnotesai.vercel.app](https://clientnotesai.vercel.app)
+The project demonstrates my experience working with a modern TypeScript application, structured frontend and backend code, reusable UI components, database tooling and deployment configuration.
 
 ---
 
-## 📸 Screenshot / Demo
+## 🚀 Project Overview
 
-### Dashboard
+AI Client Notes is a web application developed to explore building a modern application around client information, notes and AI-assisted functionality.
 
-![ClientNotesAI Dashboard](./docs/screenshots/Dashboard.png)
+The project is structured as a full-stack application and includes separate areas for:
 
-### Client Management
-
-_Add screenshot here_
-
-### AI Session Results
-
-_Add screenshot here_
-
-### Session History
-
-_Add screenshot here_
-
-🔗 **[View the Live Application](https://clientnotesai.vercel.app)**
-
----
-
-## ✨ Features
-
-### 👤 Authentication
-
-- User authentication using Clerk
-- Protected application routes
-- User-specific client data
-- Sign-in and sign-up functionality
-- Demo user functionality for portfolio visitors
-
-### 👥 Client Management
-
-- Create client profiles
-- Store client names, email addresses and phone numbers
-- Add additional client notes
-- View individual client profiles
-- Delete client records
-- View session history for each client
-
-### 🤖 AI-Powered Session Processing
-
-Users can enter rough notes from a client session and use AI to generate:
-
-- 📝 A concise session summary
-- ✅ Clear action points
-- 💬 A personalised follow-up message
-
-The AI response is returned as structured JSON so each part can be displayed separately within the application.
-
-### 📊 Dashboard
-
-The dashboard provides an overview of client activity, including:
-
-- Total clients
-- Total sessions
-- Recent client activity
-- Client and session information
-
-### 🗂️ Session History
-
-Each client has their own session history.
-
-Saved sessions contain:
-
-- Original session notes
-- AI-generated summary
-- AI-generated action points
-- AI-generated follow-up message
-- Session creation date
-
-### 📋 Copy Follow-Up Messages
-
-Generated follow-up messages can be copied directly from the application for use in client communications.
-
-### 🧪 Demo Mode
-
-A demo user allows visitors to explore the application without permanently saving changes.
-
-This provides an easy way for employers and portfolio visitors to test the application's functionality without creating their own account.
+* Frontend functionality
+* Backend functionality
+* Reusable UI components
+* Database configuration
+* Public assets
+* Project documentation
+* Screenshots
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
+**Frontend**
 
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
+* Next.js
+* TypeScript
+* React
+* Tailwind CSS
+* Reusable UI components
 
-### Backend
+**Backend**
 
-- Next.js App Router
-- Next.js Server Actions
-- Node.js
+* Next.js
+* TypeScript
+* Backend/API functionality
 
-### AI
+**Database**
 
-- OpenAI API
-- GPT-4o-mini
-- Structured JSON responses
+* Prisma
+* Database schema/configuration
 
-### Authentication
+**Development Tools**
 
-- Clerk
+* ESLint
+* Git
+* GitHub
 
-### Database
+**Deployment**
 
-- PostgreSQL
-- Prisma ORM
-
-### Deployment
-
-- Vercel
+* Railway configuration
+* Next.js production configuration
 
 ---
 
-## ⚙️ How It Works
+## 🏗️ Project Structure
 
-The application combines authentication, a relational database and AI processing into a single full-stack Next.js application.
+The project is organised into separate areas for different responsibilities.
 
-### 1. User Authentication
+```text
+AIClientNotes/
+│
+├── aiClientnotes/
+│   ├── backend/
+│   ├── components/
+│   ├── frontend/
+│   ├── prisma/
+│   ├── public/
+│   ├── RepoScreenshots/
+│   └── src/
+│
+├── components/
+│   └── ui/
+│       ├── button.tsx
+│       ├── card.tsx
+│       ├── input.tsx
+│       └── textarea.tsx
+│
+├── docs/
+├── prisma/
+├── public/
+├── src/
+│
+├── next.config.ts
+├── prisma.config.ts
+├── railway.json
+├── package.json
+└── tsconfig.json
+```
 
-Users sign in through Clerk.
-
-Protected application routes use authentication to control access to the application and ensure users can only access their own client data.
-
-### 2. Client Creation
-
-Authenticated users can create client profiles containing:
-
-- Name
-- Email
-- Phone
-- Additional notes
-
-Each client is associated with the authenticated user.
-
-### 3. Session Creation
-
-A user selects a client and enters their rough session notes.
-
-The notes are submitted through a Next.js Server Action.
-
-### 4. AI Processing
-
-The session notes are sent to OpenAI using the `gpt-4o-mini` model.
-
-The application requests a structured response containing:
-
-- A session summary
-- Action points
-- A personalised follow-up message
-
-### 5. Results
-
-The generated content is returned to the application and displayed as separate sections.
-
-Users can review the results and copy the generated follow-up message.
-
-### 6. Database Storage
-
-For normal users, the original session notes and generated AI results are stored in PostgreSQL using Prisma.
-
-The main relationships are:
-
-**User → Client → Session**
-
-This allows users to return to a client and view their previous sessions.
-
-### 7. Demo Mode
-
-The application includes a demo mode so visitors can explore the main functionality without permanently modifying the demonstration data.
+The project also includes reusable UI components such as buttons, cards, inputs and textareas.
 
 ---
 
-## 🚀 Installation
+## 🧩 Reusable Components
 
-### Prerequisites
+The project uses reusable React/TypeScript UI components to help keep the interface consistent and maintainable.
 
-Before running the project locally, you will need:
+Current components include:
 
-- Node.js
-- npm
-- PostgreSQL database
-- Clerk account
-- OpenAI API key
+```text
+components/ui/
+├── button.tsx
+├── card.tsx
+├── input.tsx
+└── textarea.tsx
+```
 
-### 1. Clone the repository
+This demonstrates experience with component-based development and creating reusable interface elements rather than building every element independently.
 
-```bash
-git clone https://github.com/SusanAlexFSD/clientnotesai.git
+---
+
+## 🗄️ Database
+
+The project uses **Prisma** for database tooling and configuration.
+
+The repository contains:
+
+```text
+prisma/
+prisma.config.ts
+```
+
+This provides experience working with database schemas and integrating database functionality into a modern TypeScript application.
+
+---
+
+## 📸 Screenshots
+
+### Application
+
+![AI Client Notes](./docs/screenshots/Dashboard.png)
+
+### Client Notes
+
+![Client Notes](./RepoScreenshots/Sessionnotes.png)
+
+### AI Features
+
+![AI Features](./RepoScreenshots/AIGeneration.png)
+
+> Screenshots demonstrate the application's interface and key areas of functionality.
+
+---
+
+## 🔧 Development
+
+During development, I worked with:
+
+* Next.js application structure
+* TypeScript
+* React components
+* Reusable UI components
+* Prisma configuration
+* Frontend/backend separation
+* Environment configuration
+* ESLint
+* Deployment configuration
+
+The project has also involved troubleshooting issues across the application structure and development environment.
+
+---
+
+## 🌍 Deployment
+
+The repository includes deployment configuration for **Railway** and production configuration for Next.js.
+
+The project has been developed with consideration for both local development and deployment environments.
+
+---
+
+## 📚 What This Project Demonstrates
+
+This project demonstrates my ability to:
+
+* Build applications using Next.js
+* Work with TypeScript
+* Create reusable React components
+* Structure a full-stack application
+* Work with Prisma and database tooling
+* Organise frontend and backend functionality
+* Work with environment configuration
+* Use Git and GitHub
+* Configure applications for deployment
+
+---
+
+## 🎯 Project Status
+
+**Portfolio project — active development**
+
+AI Client Notes is part of my full-stack development portfolio and demonstrates my progression into building modern TypeScript-based applications using Next.js and database technologies.
+
+---
+
+## 👩‍💻 About Me
+
+I'm a self-taught full-stack web developer with a background in project management and telecommunications.
+
+I'm focused on developing professional skills across **React, TypeScript, Next.js, Node.js, APIs, databases and cloud technologies**.
+
+My portfolio projects are designed to demonstrate not only the technologies I can use, but also my ability to structure applications, solve development problems and take projects from an initial idea through to a working application.
+
+---
+
+## 🔗 Links
+
+**Live Demo:** https://clientnotesai.vercel.app/sign-in
+
+**GitHub:** https://github.com/SusanAlexFSD/AIClientNotes
