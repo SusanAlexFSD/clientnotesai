@@ -136,11 +136,11 @@ This provides experience working with database schemas and integrating database 
 
 ### Client Notes
 
-![Client Notes](./RepoScreenshots/Sessionnotes.png)
+![Client Notes](./docs/screenshots/Sessionnotes.png)
 
 ### AI Features
 
-![AI Features](./RepoScreenshots/AIGeneration.png)
+![AI Features](./docs/screenshots/AIGeneration.png)
 
 > Screenshots demonstrate the application's interface and key areas of functionality.
 
